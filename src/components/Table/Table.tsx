@@ -1,6 +1,7 @@
 import { TableRow } from '../TableRow';
 
 import styles from './Table.module.scss';
+import '../../scss/font-icons.scss'
 
 const data = [
   {
