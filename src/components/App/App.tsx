@@ -4,6 +4,9 @@ import { Main } from '../Main';
 import { Footer } from '../Footer';
 
 import './App.css';
+import '../../scss/container.scss';
+import '../../scss/reset.scss';
+import '../../scss/block-border.scss';
 
 function App() {
   return (
