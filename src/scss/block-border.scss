@@ -1,0 +1,8 @@
+@import './variables.scss';
+
+.block-border {
+  background: $table-background-color;
+  border: 5px solid $table-border-color;
+  box-shadow: 0px 40px 40px $table-box-shadow-color;
+  border-radius: 30px;
+}

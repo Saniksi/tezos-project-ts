@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+
+.logo {
+  font-weight: $font-weight-700;
+  font-size: $font-size-logo;
+  letter-spacing: -0.005em;
+  color: $header-and-footer-text-color;
+}

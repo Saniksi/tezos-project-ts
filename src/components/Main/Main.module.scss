@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+
+.main {
+  padding: 50px 0 110px;
+  background: url(../../../public/img/bg-dots.png) center center/cover no-repeat,
+    $main-background-color;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+}
+
+.icons-social-arrow {
+  color: $main-text-color;
+  font-size: 9px;
+}

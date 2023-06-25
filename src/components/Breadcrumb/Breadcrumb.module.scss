@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+
+.breadcrumb {
+  font-weight: $font-weight-400;
+  font-size: $font-size-18-px;
+  color: $main-text-color;
+
+}
+
+//  !!!!!!!!!!!!!!???????? HOW ADD?
+.active {
+  font-weight: $font-weight-600;
+}
+
+.icons-social-arrow{
+  font-size: 10px;
+}

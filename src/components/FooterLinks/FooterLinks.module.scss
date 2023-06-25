@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 48px;
+  row-gap: 16px;
+  width: 333px;
+}
+
+.link {
+  width: 79px;
+  font-weight: $font-weight-500;
+  font-size: $font-size-14-px;
+  color: $header-and-footer-text-color;
+}
