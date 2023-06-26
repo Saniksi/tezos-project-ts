@@ -3,8 +3,6 @@
 .breadcrumb {
   font-weight: $font-weight-400;
   font-size: $font-size-18-px;
-  color: $main-text-color;
-
 }
 
 //  !!!!!!!!!!!!!!???????? HOW ADD?
@@ -12,6 +10,15 @@
   font-weight: $font-weight-600;
 }
 
-.icons-social-arrow{
-  font-size: 10px;
+// .icons-social-arrow {
+//   font-size: 10px;
+//   color: red;
+// }
+
+.light {
+  color: $main-text-color;
+}
+
+.dark {
+  color: $main-text-color-dark;
 }

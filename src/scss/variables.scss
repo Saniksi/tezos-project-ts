@@ -52,23 +52,23 @@ $table-active-row-color: rgba(236, 240, 249, 0.75);
 $main-text-color: #2d3b59;
 
 // Dark theme
-// $table-box-shadow-color: rgba(31, 35, 46, 0.55);
-// $table-navigation-text-color: #FFFFFF;
-// $table-border-color: #2D3B59;
-// $table-head-border-color: rgba(39, 70, 115, 0.8);
-// $table-row-border-color: rgba(39, 70, 115, 0.65);
-// $table-background-color:#25233D;
-// $table-active-row-color: #2E2B4D;
-// $accent-background-color: #1E1C37;
-// $main-background-color: linear-gradient(142.24deg, #171531 0%, rgba(23, 21, 49, 0.93) 93.7%);;
-// $button-normal-bg-color: #1e1c37;
-// $button-normal-text-color: #f0f2f4;
-// $button-normal-border: 1px solid #f0f2f4;
-// $button-hover-bg-color: #f0f2f4;
-// $button-hover-text-color: #1e1c37;
-// $button-hover-border: 1px solid #1e1c37;
+$table-box-shadow-color-dark: rgba(31, 35, 46, 0.55);
+$table-navigation-text-color-dark: #FFFFFF;
+$table-border-color-dark: #2D3B59;
+$table-head-border-color-dark: rgba(39, 70, 115, 0.8);
+$table-row-border-color-dark: rgba(39, 70, 115, 0.65);
+$table-background-color-dark:#25233D;
+$table-active-row-color-dark: #2E2B4D;
+$accent-background-color-dark: #1E1C37;
+$main-background-color-dark: linear-gradient(142.24deg, #171531 0%, rgba(23, 21, 49, 0.93) 93.7%);;
+$button-normal-bg-color-dark: #1e1c37;
+$button-normal-text-color-dark: #f0f2f4;
+$button-normal-border-dark: 1px solid #f0f2f4;
+$button-hover-bg-color-dark: #f0f2f4;
+$button-hover-text-color-dark: #1e1c37;
+$button-hover-border-dark: 1px solid #1e1c37;
 
-// $main-text-color: #F0F2F4;
+$main-text-color-dark: #F0F2F4;
 
 $index-1: 1; // Для наповзаючих елементів у загальному потоці
 $index-2: 2; // Для наповзаючих елементів у загальному потоці

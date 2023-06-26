@@ -4,5 +4,12 @@
   margin-top: 80px;
   font-weight: $font-weight-600;
   font-size: $font-size-32-px;
+}
+
+.light {
   color: $main-text-color;
+}
+
+.dark {
+  color: $main-text-color-dark;
 }

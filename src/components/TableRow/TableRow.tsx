@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+
+import { ThemeContext } from '../context/ThemeContext';
 import { TableRowProps } from '../types/TableRowProps';
 
 import styles from './TableRow.module.scss';
@@ -16,6 +19,8 @@ const TableRow = (props: TableRowProps) => {
     active,
   } = props;
 
+  const theme = useContext(ThemeContext);
+
   return (
     <tr
       className={`${
@@ -23,16 +28,16 @@ const TableRow = (props: TableRowProps) => {
       }`}
     >
       <td className={styles.data}>{blockID}</td>
-      <td className={styles.data}>{created}</td>
+      <td className={`${styles.data} ${styles[theme]}`}>{created}</td>
       <td className={styles.data}>
         <img src={bakerImg} alt="icon" />
         {baker}
       </td>
-      <td className={styles.data}>{priority}</td>
-      <td className={styles.data}>{operations}</td>
-      <td className={styles.data}>{volume} </td>
-      <td className={styles.data}>{free}</td>
-      <td className={styles.data}>{endorsements}</td>
+      <td className={`${styles.data} ${styles[theme]}`}>{priority}</td>
+      <td className={`${styles.data} ${styles[theme]}`}>{operations}</td>
+      <td className={`${styles.data} ${styles[theme]}`}>{volume} </td>
+      <td className={`${styles.data} ${styles[theme]}`}>{free}</td>
+      <td className={`${styles.data} ${styles[theme]}`}>{endorsements}</td>
     </tr>
   );
 };

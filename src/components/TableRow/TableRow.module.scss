@@ -20,7 +20,6 @@
 .data {
   font-weight: $font-weight-400;
   font-size: $font-size-main-small;
-  color: $main-text-color;
 
   &:nth-child(1) {
     width: 130px;
@@ -51,4 +50,12 @@
   &:nth-child(8) {
     width: 140px;
   }
+}
+
+.light {
+  color: $main-text-color;
+}
+
+.dark {
+  color: $main-text-color-dark;
 }
