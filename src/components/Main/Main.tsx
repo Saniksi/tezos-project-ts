@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+
+import { ThemeContext } from '../context/ThemeContext';
 import { Breadcrumb } from '../Breadcrumb';
 import { Title } from '../Title';
 import { Table } from '../Table';
@@ -5,8 +8,9 @@ import { Table } from '../Table';
 import styles from './Main.module.scss';
 
 const Main = () => {
+  const theme = useContext(ThemeContext);
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles[theme]}`}>
       <div className="container">
         <div className={styles.breadcrumbs}>
           <Breadcrumb text="Home" />

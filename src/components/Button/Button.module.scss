@@ -4,7 +4,17 @@
   padding: 10px 39px;
   font-weight: 500;
   font-size: $font-size-18-px;
+  border-radius: 6px;
+}
+
+.light {
   color: $button-normal-text-color;
   background: $button-normal-bg-color;
-  border-radius: 6px;
+  border: 1px solid $button-normal-text-color;
+}
+
+.dark {
+  color: $button-normal-text-color-dark;
+  background: $button-normal-bg-color-dark;
+  border: 1px solid $button-normal-text-color-dark;
 }

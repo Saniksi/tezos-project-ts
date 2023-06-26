@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+
+import { ThemeContext } from '../context/ThemeContext';
 import { TableRow } from '../TableRow';
 
 import styles from './Table.module.scss';
-import '../../scss/font-icons.scss'
+import '../../scss/font-icons.scss';
 
 const data = [
   {
@@ -56,58 +59,44 @@ const tableHeaderData = [
   { text: '# of endorsements', dropdown: false },
 ];
 
-const tableHeader = tableHeaderData.map(({ text, dropdown }) => {
-  return (
-    <th className={styles.header} key={text}>
-      {text}
-      {dropdown ? (
-        <span
-          className={`icons-social-triangle ${styles['icons-social-triangle']}`}
-        ></span>
-      ) : (
-        ''
-      )}
-    </th>
-  );
-});
-
 const elements = data.map((item) => {
   const { id, ...itemProps } = item;
 
   return <TableRow key={id} {...itemProps} />;
 });
 
-let prevPageX: number;
-let currentPageX;
-let positionDiff;
-
-const dragStart = (e: React.MouseEvent<HTMLDivElement>) => {
-  prevPageX = e.pageX;
-};
-
-const dragging = (e: React.MouseEvent<HTMLDivElement>) => {
-  currentPageX = e.pageX;
-  positionDiff = currentPageX - prevPageX;
-  console.log(positionDiff);
-};
-
-const dragEnd = (e: React.MouseEvent) => {};
-
 const Table = () => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <div className={`block-border ${styles.wrapper}`}>
-      <table className={styles.table}>
-        <thead>
-          <tr className={styles.row}>{tableHeader}</tr>
-        </thead>
-        <tbody>{elements}</tbody>
-      </table>
-      <div
-        className={styles.slider}
-        onMouseDown={dragStart}
-        onMouseMove={dragging}
-      ></div>
-      <div className={styles.control}>
+    <div className={`block-${theme} ${styles.wrapper}`}>
+      <div className={`${styles.inner} ${styles[theme]}`}>
+        <table className={styles.table}>
+          <thead>
+            <tr className={styles.row}>
+              {tableHeaderData.map(({ text, dropdown }) => {
+                return (
+                  <th
+                    className={`${styles.header} ${styles[theme]}`}
+                    key={text}
+                  >
+                    {text}
+                    {dropdown ? (
+                      <span
+                        className={`icons-social-triangle ${styles['icons-social-triangle']}`}
+                      ></span>
+                    ) : (
+                      ''
+                    )}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>{elements}</tbody>
+        </table>
+      </div>
+      <div className={`${styles.control} ${styles[theme]}`}>
         <div className={styles.quantity}>
           Rows pen page:
           <span>10</span>

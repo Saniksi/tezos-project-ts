@@ -1,11 +1,16 @@
+import { useContext } from 'react';
+
+import { ThemeContext } from '../context/ThemeContext';
 import { FooterLinks } from '../FooterLinks';
 import { Logo } from '../Logo';
 
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${styles[theme]}`}>
       <div className="container">
         <div className={styles.wrapper}>
           <FooterLinks />
