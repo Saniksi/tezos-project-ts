@@ -1,29 +1,73 @@
-import React, { useContext, useState } from 'react';
-import { Header } from '../Header';
-import { Main } from '../Main';
-import { Footer } from '../Footer';
-import { ThemeContext } from '../context/ThemeContext';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './App.css';
+import { HomePage } from '../../pages/HomePage/HomePage';
+import { BlocksPage } from '../../pages/BlocksPage/BlocksPage';
+import { Page404 } from '../../pages/Page404/Page404';
+import { BlockPage } from '../../pages/BlockPage';
+import { MainLayout } from '../MainLayout/MainLayout';
+
+import styles from './App.module.scss';
 import '../../scss/container.scss';
 import '../../scss/reset.scss';
 import '../../scss/block.scss';
+import { Authentication } from '../Authentication';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-  console.log('theme==', theme);
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: 'blocks',
+          element: <BlocksPage />,
+        },
+        {
+          path: 'blocks/block',
+          element: <BlockPage />,
+        },
 
-  const handlerToggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
-
+        {
+          path: 'login',
+          element: <Authentication />,
+        },
+        {
+          path: 'sing-up',
+          element: <Authentication />,
+        },
+        {
+          path: 'forgot-password',
+          element: <h2>Forgot Password?</h2>,
+        },
+        {
+          path: '*',
+          element: <Page404 />,
+        },
+      ],
+    },
+  ]);
   return (
-    <div className="App">
-      <ThemeContext.Provider value={theme}>
-        <Header handlerToggleTheme={handlerToggleTheme} />
-        <Main />
-        <Footer />
-      </ThemeContext.Provider>
+    <div className={styles.app}>
+      <RouterProvider router={router} />
+
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+
+            <Route path="blocks" element={<BlocksPage />}></Route>
+            <Route path="blocks/block" element={<BlockPage />} />
+
+            <Route path="login" element={<LoginPage />} />
+            <Route path="sing-up" element={<SingupPage />} />
+            <Route path="*" element={<Page404 />} />
+          </Route>
+        </Routes>
+      </BrowserRouter> */}
     </div>
   );
 }

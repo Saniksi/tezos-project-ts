@@ -1,15 +1,15 @@
 @import './variables.scss';
 
 .block-light {
-  background: $table-background-color;
-  border: 5px solid $table-border-color;
+  background: $white-color;
+  border: 5px solid #D9DFF8;
   box-shadow: 0px 40px 40px $table-box-shadow-color;
   border-radius: 30px;
 }
 
 .block-dark {
   background: $table-background-color-dark;
-  border: 5px solid $table-border-color-dark;
+  border: 5px solid $dark-color;
   box-shadow: 0px 40px 40px $table-box-shadow-color-dark;
   border-radius: 30px;
 }

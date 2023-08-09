@@ -2,17 +2,19 @@
 @import '../../scss/mixins.scss';
 
 .light {
-  background-color: $accent-background-color;
+  background-color: $accent-color;
 }
 
 .dark {
-  background-color: $accent-background-color-dark;
+  background-color: $accent-color-dark;
 }
 
 .wrapper {
   height: 82px;
-  @extend %flex-center;
-  column-gap: 116.5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 4rem;
 }
 
 .toggle__wrapper {

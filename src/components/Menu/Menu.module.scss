@@ -1,22 +1,25 @@
 @import '../../scss/variables.scss';
 
-.menu {
+.navigation {
+  flex-grow: 1;
+}
+
+.list {
   display: flex;
   justify-content: flex-end;
   column-gap: 56px;
-  flex-grow: 1;
 }
 
 .link {
   position: relative;
   font-weight: $font-weight-500;
-  font-size: $font-size-nav;
-  color: $header-and-footer-text-color;
+  font-size: $font-size-18-px;
+  color: $light-color;
 }
 
 .active {
   font-weight: $font-weight-700;
-  color: $nav-text-active-color;
+  color: $white-color;
 }
 
 .bakers::after {
@@ -25,7 +28,7 @@
   top: 50%;
   right: -17px;
   transform: translateY(-50%);
-  border-top: 7px solid $header-and-footer-text-color;
+  border-top: 7px solid $light-color;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }

@@ -1,25 +1,22 @@
 @import '../../scss/variables.scss';
 
-.main {
-  padding: 50px 0 110px;
-}
-
-.breadcrumbs {
+.wrapper {
   display: flex;
-  align-items: center;
-  column-gap: 14px;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.icons-social-arrow {
-  font-size: 9px;
+.main {
+  flex: 1 1 auto;
 }
+
 
 .light {
   background: url(../../../public/img/bg-dots.png) center center/cover no-repeat;
   background-color: $main-background-color;
 
   .icons-social-arrow {
-    color: $main-text-color;
+    color: $dark-color;
   }
 }
 
@@ -27,8 +24,7 @@
   // background: lightgray url(../../../public/img/bg-dots.png) 50% / cover no-repeat;
   // background-color: #1E1C37;
 
-  background: url(../../../public/img/bg-dots.png) center center / cover
-      no-repeat,
+  background: url(../../../public/img/bg-dots.png) center center / cover no-repeat,
     $main-background-color-dark;
   background-color: lightgray;
 
@@ -40,6 +36,7 @@
   //  url(../../../public/img/bg-dots.png);
 
   .icons-social-arrow {
-    color: $main-text-color-dark;
+    color: $light-color;
   }
 }
+

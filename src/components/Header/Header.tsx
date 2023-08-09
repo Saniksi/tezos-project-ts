@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { ThemeContext } from '../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { Logo } from '../Logo';
 import { Menu } from '../Menu';
 import { Button } from '../Button';
@@ -8,30 +8,25 @@ import { ReactComponent as SunIcon } from '../../icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../icons/moon.svg';
 
 import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
-console.log(styles);
-
-interface PropsHeader {
-  handlerToggleTheme: () => void;
-}
-
-const Header = ({ handlerToggleTheme }: PropsHeader) => {
-  const theme = useContext(ThemeContext);
+const Header = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <header className={styles[theme]}>
       <div className="container">
         <div className={styles.wrapper}>
-          <Logo />
-          {/* <button className={styles.toggle} onClick={handlerToggleTheme}>
-            Theme toggle
-          </button> */}
+          <Link to="/">
+            <Logo />
+          </Link>
+          <Menu />
           <div className={styles.toggle__wrapper}>
             <input
               className={styles.toggle__input}
               type="checkbox"
               id="dark-mode-toggle"
-              onChange={handlerToggleTheme}
+              onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
             />
             <label className={styles.toggle__label} htmlFor="dark-mode-toggle">
               <div className={styles.sun}>
@@ -42,8 +37,9 @@ const Header = ({ handlerToggleTheme }: PropsHeader) => {
               </div>
             </label>
           </div>
-          <Menu />
-          <Button text="Login" />
+          <Link to="login">
+            <Button text="Login" />
+          </Link>
         </div>
       </div>
     </header>

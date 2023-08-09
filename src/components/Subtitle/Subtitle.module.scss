@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+
+.subtitle {
+  font-size: $font-size-18-px;
+  line-height: normal;
+  font-style: normal;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.light {
+  color: $dark-color;
+}
+
+.dark {
+  color: $light-color;
+}

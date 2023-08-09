@@ -1,11 +1,17 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-import { ThemeContext } from '../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { TableRowProps } from '../types/TableRowProps';
 
 import styles from './TableRow.module.scss';
+import { getBlocks } from '../../api';
 
 const TableRow = (props: TableRowProps) => {
+  useEffect(() => {
+    getBlocks();
+  }, []);
+  
   const {
     blockID,
     created,
@@ -19,7 +25,7 @@ const TableRow = (props: TableRowProps) => {
     active,
   } = props;
 
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <tr
@@ -27,7 +33,10 @@ const TableRow = (props: TableRowProps) => {
         active ? `${styles.row} + ${styles.active}` : `${styles.row}`
       }`}
     >
-      <td className={styles.data}>{blockID}</td>
+      <td className={styles.data}>
+        <Link to="block">{blockID}</Link>
+      </td>
+
       <td className={`${styles.data} ${styles[theme]}`}>{created}</td>
       <td className={styles.data}>
         <img src={bakerImg} alt="icon" />

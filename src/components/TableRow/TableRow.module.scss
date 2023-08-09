@@ -19,11 +19,11 @@
 
 .data {
   font-weight: $font-weight-400;
-  font-size: $font-size-main-small;
+  font-size: $font-size-14-px;
 
   &:nth-child(1) {
     width: 130px;
-    color: $accent-text-color;
+    color: $blue-color;
   }
 
   &:nth-child(2) {
@@ -34,7 +34,7 @@
     display: flex;
     column-gap: 12px;
     width: 152px;
-    color: $accent-text-color;
+    color: $blue-color;
   }
 
   &:nth-child(4) {
@@ -53,9 +53,9 @@
 }
 
 .light {
-  color: $main-text-color;
+  color: $dark-color;
 }
 
 .dark {
-  color: $main-text-color-dark;
+  color: $light-color;
 }

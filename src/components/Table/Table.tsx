@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { ThemeContext } from '../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { TableRow } from '../TableRow';
 
 import styles from './Table.module.scss';
@@ -66,32 +66,29 @@ const elements = data.map((item) => {
 });
 
 const Table = () => {
-  const theme = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+
+  const tableHead = tableHeaderData.map(({ text, dropdown }) => {
+    return (
+      <th className={`${styles.header} ${styles[theme]}`} key={text}>
+        {text}
+        {dropdown ? (
+          <span
+            className={`icons-social-triangle ${styles['icons-social-triangle']}`}
+          ></span>
+        ) : (
+          ''
+        )}
+      </th>
+    );
+  });
 
   return (
     <div className={`block-${theme} ${styles.wrapper}`}>
       <div className={`${styles.inner} ${styles[theme]}`}>
         <table className={styles.table}>
           <thead>
-            <tr className={styles.row}>
-              {tableHeaderData.map(({ text, dropdown }) => {
-                return (
-                  <th
-                    className={`${styles.header} ${styles[theme]}`}
-                    key={text}
-                  >
-                    {text}
-                    {dropdown ? (
-                      <span
-                        className={`icons-social-triangle ${styles['icons-social-triangle']}`}
-                      ></span>
-                    ) : (
-                      ''
-                    )}
-                  </th>
-                );
-              })}
-            </tr>
+            <tr className={styles.row}>{tableHead}</tr>
           </thead>
           <tbody>{elements}</tbody>
         </table>

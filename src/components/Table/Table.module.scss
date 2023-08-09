@@ -1,8 +1,8 @@
 @import '../../scss/variables.scss';
 
 .wrapper {
+  height: 100%;
   padding: 20px;
-  margin-top: 60px;
 }
 
 .inner {
@@ -33,17 +33,17 @@
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $accent-text-color;
+    background: $blue-color;
   }
 }
 
 .inner.dark {
   &::-webkit-scrollbar-thumb {
-    background: $table-border-color-dark;
+    background: $dark-color;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $accent-text-color;
+    background: $blue-color;
   }
 }
 
@@ -52,7 +52,7 @@
   align-items: center;
   column-gap: 32px;
   padding: 5px 10px 23px;
-  border-bottom: 1px solid $table-head-border-color;
+  border-bottom: 1px solid $table-border-color;
 }
 
 .header {
@@ -131,9 +131,9 @@
 }
 
 .light {
-  color: $table-navigation-text-color;
+  color: $blue-color;
 }
 
 .dark {
-  color: $table-navigation-text-color-dark;
+  color: $blue-color;
 }

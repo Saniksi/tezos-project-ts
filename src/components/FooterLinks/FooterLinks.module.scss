@@ -6,11 +6,15 @@
   column-gap: 48px;
   row-gap: 16px;
   width: 333px;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .link {
   width: 79px;
   font-weight: $font-weight-500;
   font-size: $font-size-14-px;
-  color: $header-and-footer-text-color;
+  color: $light-color;
 }

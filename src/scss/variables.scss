@@ -8,67 +8,43 @@ $font-size-18-px: 18px;
 $font-size-24-px: 24px;
 $font-size-32-px: 32px;
 
-$font-size-nav: $font-size-18-px;
-$font-size-nav-mobile: $font-size-14-px;
-$font-size-logo: $font-size-24-px;
-$font-size-logo-small: $font-size-18-px;
-$font-size-title: $font-size-32-px;
-$font-size-subtitle: $font-size-18-px;
-$font-size-title-small: $font-size-24-px;
-$font-size-main: $font-size-16-px;
-$font-size-main-small: $font-size-14-px;
-
-$font-size-accent: $font-size-18-px;
-$font-size-accent-small: $font-size-14-px;
-
 $font-weight-300: 300;
 $font-weight-400: 400;
 $font-weight-500: 500;
 $font-weight-600: 600;
 $font-weight-700: 700;
 
-$header-and-footer-text-color: #f0f2f4;
-$accent-text-color: #536dfb;
-$nav-text-active-color: #ffffff;
+$light-color: #f0f2f4;
+$white-color: #ffffff;
+$blue-color: #536dfb;
+$dark-color: #2d3b59;
+
+$accent-color: #274673;
+$accent-color-dark: #1e1c37;
+$table-border-color: #d9dff8;
+
+$hint-color: rgba(45, 59, 89, 0.6);
+$privacy-hint-color: #536dfbcc;
+$eyes-icon-color: rgba(45, 59, 89, 0.4);
+$error-color: #ff3b30;
 
 // Light theme
-$accent-background-color: #274673;
-
 $main-background-color: #ecf0f9;
-
-$button-normal-bg-color: #ffffff;
-$button-normal-text-color: #274673;
-$button-hover-bg-color: #274673;
-$button-hover-text-color: #f0f2f4;
-$button-hover-border: 1px solid #f0f2f4;
-
-$table-navigation-text-color: #536dfb;
-$table-background-color: #ffffff;
-$table-border-color: #d9dff8;
-$table-head-border-color: #d9dff8;
 $table-row-border-color: rgba(217, 223, 248, 0.65);
 $table-box-shadow-color: rgba(217, 223, 248, 0.35);
 $table-active-row-color: rgba(236, 240, 249, 0.75);
-$main-text-color: #2d3b59;
 
 // Dark theme
 $table-box-shadow-color-dark: rgba(31, 35, 46, 0.55);
-$table-navigation-text-color-dark: #FFFFFF;
-$table-border-color-dark: #2D3B59;
 $table-head-border-color-dark: rgba(39, 70, 115, 0.8);
 $table-row-border-color-dark: rgba(39, 70, 115, 0.65);
-$table-background-color-dark:#25233D;
-$table-active-row-color-dark: #2E2B4D;
-$accent-background-color-dark: #1E1C37;
-$main-background-color-dark: linear-gradient(142.24deg, #171531 0%, rgba(23, 21, 49, 0.93) 93.7%);;
-$button-normal-bg-color-dark: #1e1c37;
-$button-normal-text-color-dark: #f0f2f4;
-$button-normal-border-dark: 1px solid #f0f2f4;
-$button-hover-bg-color-dark: #f0f2f4;
-$button-hover-text-color-dark: #1e1c37;
-$button-hover-border-dark: 1px solid #1e1c37;
-
-$main-text-color-dark: #F0F2F4;
+$table-background-color-dark: #25233d;
+$table-active-row-color-dark: #2e2b4d;
+$main-background-color-dark: linear-gradient(
+  142.24deg,
+  #171531 0%,
+  rgba(23, 21, 49, 0.93) 93.7%
+);
 
 $index-1: 1; // Для наповзаючих елементів у загальному потоці
 $index-2: 2; // Для наповзаючих елементів у загальному потоці
