@@ -1,5 +1,5 @@
 export interface TableRowProps {
-  blockID: string;
+  blockId: string;
   created: string;
   bakerImg: string;
   baker: string;

@@ -30,20 +30,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icons-social-arrow:before {
-  content: '\e900';
+.icons-social-block:before {
+  content: '\e904';
 }
-
+.icons-social-chart:before {
+  content: '\e905';
+}
+.icons-social-ecosystem-:before {
+  content: '\e906';
+}
+.icons-social-home:before {
+  content: '\e907';
+}
+.icons-social-people:before {
+  content: '\e908';
+}
+.icons-social-people-icon:before {
+  content: '\e909';
+}
+.icons-social-eyes-hide:before {
+  content: '\e902';
+}
+.icons-social-eyes-show:before {
+  content: '\e903';
+}
 .icons-social-triangle:before {
   content: '\e901';
 }
-
-.icons-social-eyes-hide:before {
-  content: "\e902";
+.icons-social-arrow:before {
+  content: '\e900';
 }
-.icons-social-eyes-show:before {
-  content: "\e903";
-}
-
-
-

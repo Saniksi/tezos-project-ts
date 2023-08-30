@@ -1,19 +1,14 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { TableRowProps } from '../types/TableRowProps';
 
 import styles from './TableRow.module.scss';
-import { getBlocks } from '../../api';
 
 const TableRow = (props: TableRowProps) => {
-  useEffect(() => {
-    getBlocks();
-  }, []);
-  
   const {
-    blockID,
+    blockId,
     created,
     bakerImg,
     baker,
@@ -28,19 +23,17 @@ const TableRow = (props: TableRowProps) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <tr
-      className={`${
-        active ? `${styles.row} + ${styles.active}` : `${styles.row}`
-      }`}
-    >
+    <tr className={styles.row}>
       <td className={styles.data}>
-        <Link to="block">{blockID}</Link>
+        <Link to={`${blockId}`}>{blockId}</Link>
       </td>
 
       <td className={`${styles.data} ${styles[theme]}`}>{created}</td>
       <td className={styles.data}>
-        <img src={bakerImg} alt="icon" />
-        {baker}
+        <img className={styles.image} src={bakerImg} alt="icon" />
+        <Link to={`${blockId}`} className={styles.baker} title={baker}>
+          {baker}
+        </Link>
       </td>
       <td className={`${styles.data} ${styles[theme]}`}>{priority}</td>
       <td className={`${styles.data} ${styles[theme]}`}>{operations}</td>

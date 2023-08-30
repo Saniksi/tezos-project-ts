@@ -1,19 +1,15 @@
 @import '../../scss/variables.scss';
 
 .breadcrumb {
+  margin-left: 8px;
   font-weight: $font-weight-400;
   font-size: $font-size-18-px;
 }
 
-//  !!!!!!!!!!!!!!???????? HOW ADD?
 .active {
+  // margin-left: 8px;
   font-weight: $font-weight-600;
 }
-
-// .icons-social-arrow {
-//   font-size: 10px;
-//   color: red;
-// }
 
 .light {
   color: $dark-color;
@@ -21,4 +17,15 @@
 
 .dark {
   color: $light-color;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 50px;
+}
+
+.icons-social-arrow {
+  font-size: 9px;
 }

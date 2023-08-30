@@ -15,6 +15,11 @@
   justify-content: right;
   align-items: center;
   gap: 4rem;
+
+  @media (max-width: 992px) {
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 
 .toggle__wrapper {
@@ -98,4 +103,22 @@
 .toggle__input:checked + .toggle__label .moon {
   fill: #7e7e7e;
   stroke: #fff;
+}
+
+.people-icon {
+  display: none;
+  color: white;
+  font-size: 1.25rem;
+
+  @media (max-width: 576px) {
+    display: block;
+  }
+}
+
+.header-button {
+  display: block;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 }

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from '../../pages/HomePage/HomePage';
 import { BlocksPage } from '../../pages/BlocksPage/BlocksPage';
 import { Page404 } from '../../pages/Page404/Page404';
-import { BlockPage } from '../../pages/BlockPage';
+import { BlockPage } from '../../pages/BlockPage/BlockPage';
 import { MainLayout } from '../MainLayout/MainLayout';
 
 import styles from './App.module.scss';
@@ -27,10 +27,9 @@ function App() {
           element: <BlocksPage />,
         },
         {
-          path: 'blocks/block',
+          path: 'blocks/:blockId',
           element: <BlockPage />,
         },
-
         {
           path: 'login',
           element: <Authentication />,
@@ -53,21 +52,6 @@ function App() {
   return (
     <div className={styles.app}>
       <RouterProvider router={router} />
-
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<HomePage />} />
-
-            <Route path="blocks" element={<BlocksPage />}></Route>
-            <Route path="blocks/block" element={<BlockPage />} />
-
-            <Route path="login" element={<LoginPage />} />
-            <Route path="sing-up" element={<SingupPage />} />
-            <Route path="*" element={<Page404 />} />
-          </Route>
-        </Routes>
-      </BrowserRouter> */}
     </div>
   );
 }

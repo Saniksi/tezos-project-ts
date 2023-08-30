@@ -2,6 +2,10 @@
 
 .navigation {
   flex-grow: 1;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .list {

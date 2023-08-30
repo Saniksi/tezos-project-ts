@@ -9,6 +9,7 @@ import { ReactComponent as MoonIcon } from '../../icons/moon.svg';
 
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
+import { MobileMenu } from '../MobileMenu/MobileMenu';
 
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -38,8 +39,14 @@ const Header = () => {
             </label>
           </div>
           <Link to="login">
-            <Button text="Login" />
+            <span
+              className={`icons-social-people ${styles['people-icon']}`}
+            ></span>
+            <div className={styles['header-button']}>
+              <Button text="Login" />
+            </div>
           </Link>
+          <MobileMenu />
         </div>
       </div>
     </header>
